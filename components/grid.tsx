@@ -109,9 +109,22 @@ const features = [
 export default function Grid() {
   return (
     <BentoGrid>
-      {features.map((feature, idx) => (
-        <BentoCard key={idx} {...feature} />
-      ))}
+      {features.map((feature, idx) => {
+        const { name, className, background, Icon, description, href, cta } =
+          feature;
+        return (
+          <BentoCard
+            key={idx}
+            name={name}
+            className={className}
+            background={background}
+            Icon={Icon}
+            description={description}
+            href={href}
+            cta={cta}
+          />
+        );
+      })}
     </BentoGrid>
   );
 }
