@@ -1,5 +1,5 @@
 
-# Next Js Portfolio Template
+# Next Js Portfolio
 `Images`
 <div align="center" width="100%">
   <img src="https://i.ibb.co/WWj2gtx/portfolio.png" alt="dashboard">
