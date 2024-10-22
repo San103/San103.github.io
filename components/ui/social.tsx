@@ -9,7 +9,7 @@ export default function DockDemo() {
     <div className="relative">
       <Dock direction="middle">
         <DockIcon>
-          <Icons.gitHub className="size-6" />
+          <Icons.gitHub className="size-6"  onClick={() => window.open('https://github.com/San103', '_blank')}/>
         </DockIcon>
         <DockIcon>
           <Icons.linkedin className="size-6" />
