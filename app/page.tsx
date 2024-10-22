@@ -24,7 +24,7 @@ import Grid from "@/components/grid";
 import SafariDemo from "@/components/safari";
 
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
-const name = "I'm Peter Parker";
+const name = "I'm San Palban";
 const shortDetails = `" A passionate software engineer who transforms complex problems into elegant solutions. With expertise in various technologies, I build robust, scalable, and innovative applications that drive growth.🥰"`;
 
 export default function Home() {
