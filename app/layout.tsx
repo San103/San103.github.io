@@ -29,14 +29,13 @@ export default function RootLayout({
       {/* https://tailwindcomponents.com/component/navbar-hamburger-menu-for-ecommerce */}
       <body className={mont.className}>
         <div className="flex flex-wrap place-items-start">
-          <section className="absolute mx-auto">
+          <section>
             <nav className="flex justify-between border-b border-gray-600 text-white w-screen">
               <div className="px-5 xl:px-12 py-3 flex w-full items-center">
-                <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+                <div className="flex w-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
                   <a
                     className="pointer-events-none flex place-items-center gap-2 p-10 ml-12 lg:pointer-events-auto lg:p-0"
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    target="_blank"
+                    href="#"
                     rel="noopener noreferrer"
                   >
                     <Image
@@ -62,11 +61,12 @@ export default function RootLayout({
                   </li>
                   <li>
                     <a className="hover:text-gray-200" href="#contact">
-                      Contact
+                      Contact Us
                     </a>
                   </li>
+                 
                 </ul>
-                <div className="flex items-center justify-center">
+                <a className="flex items-center justify-center" href="#contact">
                   <AnimatedGradientText className="bg-white" >
                     🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
                     <span
@@ -78,7 +78,7 @@ export default function RootLayout({
                     </span>
                     <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 text-slate-800" />
                   </AnimatedGradientText>
-                </div>
+                </a>
                 {/* <div className="flex items-center justify-center">
                   <div
                     className={cn(

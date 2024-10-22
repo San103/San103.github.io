@@ -34,8 +34,8 @@ const githubLink = () => {
 };
 export default function Home() {
   return (
-    <main className="h-screen justify-center items-center">
-      <div className="h-screen relative flex w-full flex-col md:flex-row items-center justify-center md:shadow-xl ">
+    <main className="">
+      <div className="flex w-full flex-col md:flex-row items-center justify-center md:shadow-xl ">
         <Meteors number={20} />
 
         {/* Column 1 */}
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
 
         {/* Column 2 */}
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative">
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative bottom-12 pointer-events-none">
           <div className="relative w-[800px] h-[50rem]">
             <Image
               className="absolute top-10 rotate-180"
