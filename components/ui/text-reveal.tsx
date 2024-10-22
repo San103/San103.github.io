@@ -49,6 +49,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             "inset-x-60 inset-y-[-60%] h-[200%] skew-y-12"
           )}
         />
+
         {/*  */}
         <div className="flex items-center justify-center w-full ">
           <div className="w-full md:w-1/2">
@@ -59,7 +60,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
               }
             >
               {words.map((word, i) => {
-                const start = i  / words.length;
+                const start = i / words.length;
                 const end = start + 1 / words.length;
                 return (
                   <Word key={i} progress={scrollYProgress} range={[start, end]}>
@@ -70,6 +71,17 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             </p>
           </div>
           <div className="w-full md:w-1/4 flex justify-center">
+            {/* <div className="text-white flex flex-col">
+              <div className="space-x-3">
+
+              <span>Laravel</span>
+              <span>React js</span>
+              <span>Vue js</span>
+              <span>React Native</span>
+              <span>Php</span>
+              <span>Typescript</span>
+              </div>
+            </div> */}
             <LogoCloud />
           </div>
         </div>

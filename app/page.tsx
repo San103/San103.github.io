@@ -178,9 +178,9 @@ export default function Home() {
       <div className=" p-32 flex justify-center items-center flex-col my-32 space-y-10 ">
         <div className="text-center space-y-5">
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-            Expertise
+            Projects
           </span>
-          <p className="text-white/50">I do awesome services for my clients</p>
+          <p className="text-white/50">Awesome services I offered for my clients</p>
         </div>
         <Grid />
         <section className="" id="contact">
@@ -205,7 +205,7 @@ export default function Home() {
                   type="email"
                   id="email"
                   className="shadow-sm border text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-                  placeholder="san@gmail.com"
+                  placeholder="iamhandsome@gmail.com"
                   required
                 />
               </div>
