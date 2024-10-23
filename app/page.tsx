@@ -24,9 +24,12 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import ShineCard from "@/components/card-gradient";
 import Grid from "@/components/grid";
 import SafariDemo from "@/components/safari";
-import ShinyButton from "@/components/ui/shiny-button";
+import ContactUs from "@/app/pages/contact-us";
+
+import { Button } from "@/components/ui/button";
 
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+
 const name = "I'm San Palban";
 const shortDetails = `" A passionate software engineer who transforms complex problems into elegant solutions. With expertise in various technologies, I build robust, scalable, and innovative applications that drive growth.🥰"`;
 const githubLink = () => {
@@ -180,74 +183,13 @@ export default function Home() {
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
             Projects
           </span>
-          <p className="text-white/50">Awesome services I offered for my clients</p>
+          <p className="text-white/50">
+            Awesome services I offered for my clients
+          </p>
         </div>
         <Grid />
-        <section className="" id="contact">
-          <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
-              Contact Us
-            </h2>
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-400 sm:text-xl">
-              Feel free to get in touch for project inquiries, collaboration
-              opportunities, or any questions you may have. I’m always excited
-              to connect!
-            </p>
-            <form action="#" className="space-y-8">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-300"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="shadow-sm border text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-                  placeholder="iamhandsome@gmail.com"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block mb-2 text-sm font-medium text-gray-300"
-                >
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="block p-3 w-full text-sm  rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-                  placeholder="Let us know how we can help you"
-                  required
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block mb-2 text-sm font-medium text-gray-400"
-                >
-                  Your message
-                </label>
-                <textarea
-                  id="message"
-                  rows={6}
-                  className="block p-2.5 w-full text-sm rounded-lg shadow-sm border focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="Leave a comment..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
-              >
-                <ShinyButton>Send Message</ShinyButton>
-              </button>
-            </form>
-          </div>
-        </section>
       </div>
+      <ContactUs />
       {/* <div className="grid grid-cols-3 gap-20 text-white p-20">
           <ShineCard/>
           <ShineCard/>

@@ -1,3 +1,30 @@
+import { connectToDatabase } from "../../lib/mongodb";
+import { GetServerSideProps } from "next";
+
+const Page = async () => {
+  let isConnected = false;
+
+  try {
+    const { db } = await connectToDatabase();
+    isConnected = true; // Set true if the connection is successful
+    await db.command({ ping: 1 }); // Optional: Another check
+  } catch (error) {
+    console.error('Database connection error:', error);
+  }
+
+  return (
+    <div className="flex justify-center items-center">
+      <h1>MongoDB Connection Status</h1>
+      <p className="text-green-500">{isConnected ? "Connected to MongoDB" : "Not connected to MongoDB"}</p>
+    </div>
+  );
+};
+
+export default Page;
+ 
+ 
+ 
+ 
  {/* <span className="text-gray-500"> Related Blogs:</span> */}
 
           {/* <div className="grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">

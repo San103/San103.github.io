@@ -66,19 +66,23 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
   const { theme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
-    if (!data) return null;
+    if (!data || !isMounted) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
       renderCustomIcon(icon, theme || "light"),
     );
-  }, [data, theme]);
+  }, [data, theme, isMounted]);
 
+  if (!isMounted) return null;
+  
   return (
     // @ts-ignore
     <Cloud {...cloudProps}>
