@@ -4,11 +4,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import ShinyButton from "@/components/ui/shiny-button";
 
-type ConnectionStatus = {
-  isConnected: boolean;
-};
-
-export default function ContactUs() {
+export default function ContactUs({
+  onSubmitSuccess,
+  onSubmitError,
+}: {
+  onSubmitSuccess: () => void;
+  onSubmitError: () => void;
+}) {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -24,15 +26,15 @@ export default function ContactUs() {
       body: JSON.stringify({ email, subject, message }),
     });
 
-    if (res.ok) {
-      const data = await res.json();
-      alert("Submitted Successfully: " + data.postId);
-      setEmail('');
-      setSubject('');
-      setMessage('');
 
+    if (res.ok) {
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      onSubmitSuccess();
       router.push("/");
     } else {
+      onSubmitError();
       alert("Error creating post");
     }
   };

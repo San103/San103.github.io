@@ -25,8 +25,10 @@ import ShineCard from "@/components/card-gradient";
 import Grid from "@/components/grid";
 import SafariDemo from "@/components/safari";
 import ContactUs from "@/app/pages/contact-us";
-
+import { AnimatedList } from "@/components/ui/animated-list";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import NotifyMagic from "./pages/notification";
 
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
@@ -35,9 +37,25 @@ const shortDetails = `" A passionate software engineer who transforms complex pr
 const githubLink = () => {
   return window.open("https://github.com/San103", "_blank");
 };
+
 export default function Home() {
+  const [isSubmitted, setIsSubmitted] = useState<null | "success" | "error">(
+    null
+  );
+  const handleSuccess = () => {
+    setIsSubmitted("success");
+  };
+  const handleError = () => {
+    setIsSubmitted("error");
+  };
+  const setStat = () => {
+    setIsSubmitted(null);
+  };
+
   return (
     <main className="">
+      {isSubmitted && <NotifyMagic status={isSubmitted} setStatus={setStat} />}
+
       <div className="flex w-full flex-col md:flex-row items-center justify-center md:shadow-xl ">
         <Meteors number={20} />
 
@@ -189,7 +207,7 @@ export default function Home() {
         </div>
         <Grid />
       </div>
-      <ContactUs />
+      <ContactUs onSubmitSuccess={handleSuccess} onSubmitError={handleError} />
       {/* <div className="grid grid-cols-3 gap-20 text-white p-20">
           <ShineCard/>
           <ShineCard/>
