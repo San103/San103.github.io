@@ -35,7 +35,6 @@ export default function ContactUs({
       router.push("/");
     } else {
       onSubmitError();
-      alert("Error creating post");
     }
   };
   return (
