@@ -31,7 +31,7 @@ const slugs = [
 
 export default function LogoCloud() {
   return (
-    <div className="flex z-10 size-full max-w-lg items-center justify-center overflow-hidden rounded-lg pb-20 pt-8 ">
+    <div className="flex z-10 size-full max-w-lg items-center justify-center overflow-hidden rounded-lg pb-20">
       <IconCloud iconSlugs={slugs} />
     </div>
   );

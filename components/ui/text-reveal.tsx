@@ -70,19 +70,26 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
               })}
             </p>
           </div>
-          <div className="w-full md:w-1/4 flex justify-center">
-            {/* <div className="text-white flex flex-col">
-              <div className="space-x-3">
-
-              <span>Laravel</span>
-              <span>React js</span>
-              <span>Vue js</span>
-              <span>React Native</span>
-              <span>Php</span>
-              <span>Typescript</span>
-              </div>
-            </div> */}
+          <div className="w-full md:w-1/4 flex justify-center flex-col ">
             <LogoCloud />
+            <div className="space-x-3 text-white max-w-96 ">
+              <ul className="list-disc marker:text-red-600 flex flex-wrap space-x-10 leading-relaxed text-sm uppercase justify-center">
+                <li>Laravel</li>
+                <li>Vue js</li>
+                <li>Next js</li>
+                <li>React js</li>
+                <li>Typescript</li>
+                <li>Javascript</li>
+                <li>Redux</li>
+                <li>Html5</li>
+                <li>Github</li>
+                <li>Tailwind</li>
+                <li>Php</li>
+                <li>CSS3</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

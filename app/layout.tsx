@@ -35,7 +35,7 @@ export default function RootLayout({
                 <div className="flex w-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
                   <a
                     className="pointer-events-none flex place-items-center gap-2 p-10 ml-12 lg:pointer-events-auto lg:p-0"
-                    href="#"
+                    href="/"
                     rel="noopener noreferrer"
                   >
                     <Image
@@ -50,7 +50,7 @@ export default function RootLayout({
                 </div>
                 <ul className="hidden md:flex px-4 mx-auto text-sm font-heading space-x-12">
                   <li>
-                    <a className="hover:text-gray-200" href="#">
+                    <a className="hover:text-gray-200" href="/">
                       Home
                     </a>
                   </li>
@@ -64,10 +64,9 @@ export default function RootLayout({
                       Contact Us
                     </a>
                   </li>
-                 
                 </ul>
                 <a className="flex items-center justify-center" href="#contact">
-                  <AnimatedGradientText className="bg-white" >
+                  <AnimatedGradientText className="bg-white">
                     🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
                     <span
                       className={cn(
