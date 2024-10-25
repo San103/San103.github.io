@@ -29,10 +29,11 @@ import { AnimatedList } from "@/components/ui/animated-list";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import NotifyMagic from "./pages/notification";
+import HyperText from "@/components/ui/hyper-text";
 
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
-const name = "I'm San Palban";
+const name = "San Palban";
 const shortDetails = `" A passionate software engineer who transforms complex problems into elegant solutions. With expertise in various technologies, I build robust, scalable, and innovative applications that drive growth.🥰"`;
 const githubLink = () => {
   return window.open("https://github.com/San103", "_blank");
@@ -63,9 +64,13 @@ export default function Home() {
         <div className="w-full md:w-1/2 flex flex-col overflow-hidden h-full justify-center pl-32">
           <BoxReveal boxColor={"#ffff"} duration={0.5}>
             <div>
-              <p className="text-[3.5rem] font-semibold text-white">
-                Hi, {name}
-              </p>
+              <span className="text-[3.5rem] font-semibold text-white">
+               
+                <HyperText className="text-white"
+                  text={name}
+                />
+              </span>
+              
             </div>
           </BoxReveal>
 
