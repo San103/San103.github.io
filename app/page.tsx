@@ -181,25 +181,22 @@ export default function Home() {
         </div>
       </div>
 
-      {/* The Next Page */}
       <div
         className="text-sm flex flex-col items-center justify-start min-h-96"
         id="expertise"
       >
-        {/* <div className="flex min-h-64 items-center justify-center"> */}
 
         <TextReveal text={shortDetails} />
-        {/* </div> */}
-        <div className="text-center space-y-5 pt-32">
+        {/* <div className="text-center space-y-5 pt-32">
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
             Testimonies
           </span>
           <p className="text-white/50">I do awesome services for my clients</p>
-        </div>
+        </div> */}
       </div>
-      <div className="min-h-44">
+      {/* <div className="min-h-44">
         <Witness />
-      </div>
+      </div> */}
 
       <div className=" p-32 flex justify-center items-center flex-col my-32 space-y-10 ">
         <div className="text-center space-y-5">

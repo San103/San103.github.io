@@ -17,6 +17,7 @@ export default function ContactUs({
   const router = useRouter();
 
   const handleSubmit = async (e: any) => {
+    
     e.preventDefault();
     const res = await fetch("/api/contact", {
       method: "POST",

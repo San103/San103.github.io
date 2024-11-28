@@ -34,9 +34,9 @@ const files = [
 const features = [
   {
     Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
-    href: "#",
+    name: "Expense Tracker (React Native)",
+    description: "2022-2023 - A tracker app where users can track their income and expenses and view their income prediction for the next month.",
+    href: "https://github.com/San103/Expense-Tracker-React-Native",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
     background: (
@@ -44,7 +44,7 @@ const features = [
         pauseOnHover
         className="absolute top-10 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] "
       >
-        {files.map((f, idx) => (
+        {/* {files.map((f, idx) => (
           <figure
             key={idx}
             className={cn(
@@ -63,14 +63,14 @@ const features = [
             </div>
             <blockquote className="mt-2 text-xs">{f.body}</blockquote>
           </figure>
-        ))}
+        ))} */}
       </Marquee>
     ),
   },
   {
     Icon: BellIcon,
-    name: "Notifications",
-    description: "Get notified when something happens.",
+    name: "Bank Reconciliation System Admin Side( React - Typescript )",
+    description: "2023-2024 - Implemented CORS routing for Laravel BRS to track users activity",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
@@ -80,8 +80,8 @@ const features = [
   },
   {
     Icon: Share2Icon,
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
+    name: "GC - Gift Check ( Laravel )",
+    description: "2024 - A system manages gift check transactions for private company",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
@@ -91,8 +91,8 @@ const features = [
   },
   {
     Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    name: "Rice Identifier - (Java - Python)",
+    description: "2021-2022 - An image processing application made with heart for my capstone project, this was made using Java language in android studio",
     className: "col-span-3 lg:col-span-1",
     href: "#",
     cta: "Learn more",
