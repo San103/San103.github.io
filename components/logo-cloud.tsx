@@ -1,4 +1,4 @@
-import IconCloud from "@/components/ui/icon-cloud";
+import { IconCloud } from "./ui/icon-cloud";
 
 const slugs = [
   "typescript",
@@ -30,9 +30,13 @@ const slugs = [
 ];
 
 export default function LogoCloud() {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  )
+
   return (
-    <div className="flex z-10 size-full max-w-lg items-center justify-center overflow-hidden rounded-lg pb-20">
-      <IconCloud iconSlugs={slugs} />
+    <div className="relative flex size-full items-center justify-center overflow-hidden">
+      <IconCloud images={images} />
     </div>
-  );
+  )
 }

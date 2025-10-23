@@ -15,7 +15,7 @@ const mont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "San Palban - Portfolio",
+  title: "Jessan Palban - Portfolio",
   description: "A portfolio website",
 };
 

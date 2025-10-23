@@ -27,13 +27,15 @@ import SafariDemo from "@/components/safari";
 import ContactUs from "@/app/pages/contact-us";
 import { AnimatedList } from "@/components/ui/animated-list";
 import { Button } from "@/components/ui/button";
+import { AuroraText } from "@/components/ui/aurora-text";
 import { useState, useEffect } from "react";
 import NotifyMagic from "./pages/notification";
 import HyperText from "@/components/ui/hyper-text";
 
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { VideoText } from "@/components/ui/video-text";
 
-const name = "San Palban";
+const name = "Jessan Palban";
 const shortDetails = `" A passionate software engineer who transforms complex problems into elegant solutions. With expertise in various technologies, I build robust, scalable, and innovative applications that drive growth.🥰"`;
 const githubLink = () => {
   return window.open("https://github.com/San103", "_blank");
@@ -57,29 +59,26 @@ export default function Home() {
     <main className="">
       {isSubmitted && <NotifyMagic status={isSubmitted} setStatus={setStat} />}
 
-      <div className="flex w-full flex-col md:flex-row items-center justify-center md:shadow-xl ">
+      <div className="flex w-full flex-col md:flex-row items-center justify-center md:shadow-xl">
         <Meteors number={20} />
 
         {/* Column 1 */}
         <div className="w-full md:w-1/2 flex flex-col overflow-hidden h-full justify-center pl-32">
-          <BoxReveal boxColor={"#ffff"} duration={0.5}>
-            <div>
-              <span className="text-[3.5rem] font-semibold text-white">
-               
-                <HyperText className="text-white"
-                  text={name}
-                />
-              </span>
-              
-            </div>
-          </BoxReveal>
-
-          <BoxReveal boxColor={"#ffff"} duration={0.5}>
-            <h2 className="mt-[.5rem] text-[1rem]">
-              <span className="text-white">FULLSTACK SOFTWARE ENGINEER</span>
-            </h2>
-          </BoxReveal>
-
+          <div className="relative h-[100px] w-full overflow-hidden">
+            <VideoText
+              // src="https://www.pexels.com/download/video/18526831/"
+              src="https://www.pexels.com/download/video/9909477/"
+              // src="https://www.pexels.com/download/video/29882131/"
+              // src="https://www.pexels.com/download/video/854322/"
+              // src="https://www.pexels.com/download/video/6466100/"
+            >
+              Jessan Palban
+            </VideoText>
+          </div>
+          {/* https://www.pexels.com/download/video/5091624/ */}
+          <h2 className="mt-[.5rem] text-[1rem]">
+            <span className="text-white">FULLSTACK SOFTWARE ENGINEER</span>
+          </h2>
           <BoxReveal boxColor={"#ffff"} duration={0.5}>
             <p className="text-white pt-8">
               As a dedicated software engineer, I design intuitive and
@@ -145,7 +144,7 @@ export default function Home() {
               className="absolute bottom-10 z-0 left-1/2 -translate-x-1/2"
               src={orange}
               alt="profile"
-              width={480}
+              width={450}
               height={90}
             />
 
@@ -157,14 +156,14 @@ export default function Home() {
 
             <div className="relative">
               <Image
-                className="relative left-1/2 -translate-x-1/2 top-0"
+                className="relative left-1/2 -translate-x-1/2 top-20"
                 src="/images/profile.png"
                 alt="profile"
-                width={420}
+                width={380}
                 height={90}
                 priority
               />
-              <div className="w-full text-center">
+              <div className="w-full text-center pt-12">
                 <SparklesText
                   text="INNOVATE"
                   colors={{ first: "red", second: "white" }}
@@ -185,7 +184,6 @@ export default function Home() {
         className="text-sm flex flex-col items-center justify-start min-h-96"
         id="expertise"
       >
-
         <TextReveal text={shortDetails} />
         {/* <div className="text-center space-y-5 pt-32">
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">

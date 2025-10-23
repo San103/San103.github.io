@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { AuroraText } from "@/components/ui/aurora-text"
 
 interface HyperTextProps {
   text: string;
@@ -39,31 +40,28 @@ export default function HyperText({
   };
 
   useEffect(() => {
-    const interval = setInterval(
-      () => {
-        if (!animateOnLoad && isFirstRender.current) {
-          clearInterval(interval);
-          isFirstRender.current = false;
-          return;
-        }
-        if (interations.current < text.length) {
-          setDisplayText((t) =>
-            t.map((l, i) =>
-              l === " "
-                ? l
-                : i <= interations.current
-                  ? text[i]
-                  : alphabets[getRandomInt(26)],
-            ),
-          );
-          interations.current = interations.current + 0.1;
-        } else {
-          setTrigger(false);
-          clearInterval(interval);
-        }
-      },
-      duration / (text.length * 10),
-    );
+    const interval = setInterval(() => {
+      if (!animateOnLoad && isFirstRender.current) {
+        clearInterval(interval);
+        isFirstRender.current = false;
+        return;
+      }
+      if (interations.current < text.length) {
+        setDisplayText((t) =>
+          t.map((l, i) =>
+            l === " "
+              ? l
+              : i <= interations.current
+              ? text[i]
+              : alphabets[getRandomInt(26)]
+          )
+        );
+        interations.current = interations.current + 0.1;
+      } else {
+        setTrigger(false);
+        clearInterval(interval);
+      }
+    }, duration / (text.length * 10));
     // Clean up interval on unmount
     return () => clearInterval(interval);
   }, [text, duration, trigger, animateOnLoad]);
@@ -73,7 +71,7 @@ export default function HyperText({
       className="overflow-hidden flex cursor-default scale-100"
       onMouseEnter={triggerAnimation}
     >
-       Hi, I&apos;m&nbsp;
+      Hi, I&apos;m&nbsp;
       <AnimatePresence mode="wait">
         {displayText.map((letter, i) => (
           <motion.h1
@@ -81,7 +79,7 @@ export default function HyperText({
             className={cn("font-mono", letter === " " ? "w-3" : "", className)}
             {...framerProps}
           >
-            {letter.toUpperCase()}
+            <AuroraText>{letter.toUpperCase()}</AuroraText>
           </motion.h1>
         ))}
       </AnimatePresence>
