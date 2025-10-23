@@ -67,9 +67,9 @@ export default function Home() {
           <div className="relative h-[100px] w-full overflow-hidden">
             <VideoText
               // src="https://www.pexels.com/download/video/18526831/"
-              src="https://www.pexels.com/download/video/9909477/"
+              // src="https://www.pexels.com/download/video/9909477/"
               // src="https://www.pexels.com/download/video/29882131/"
-              // src="https://www.pexels.com/download/video/854322/"
+              src="https://www.pexels.com/download/video/854322/"
               // src="https://www.pexels.com/download/video/6466100/"
             >
               Jessan Palban

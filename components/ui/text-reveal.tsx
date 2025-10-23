@@ -79,6 +79,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
                 <li>Next js</li>
                 <li>React js</li>
                 <li>Typescript</li>
+                <li>Flutter</li>
                 <li>Javascript</li>
                 <li>Redux</li>
                 <li>Html5</li>
