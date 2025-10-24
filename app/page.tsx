@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Meteors from "@/components/ui/meteors";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import BoxReveal from "@/components/ui/box-reveal";
@@ -34,6 +33,7 @@ import HyperText from "@/components/ui/hyper-text";
 
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { VideoText } from "@/components/ui/video-text";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 const name = "Jessan Palban";
 const shortDetails = `" A passionate software engineer who transforms complex problems into elegant solutions. With expertise in various technologies, I build robust, scalable, and innovative applications that drive growth.🥰"`;
@@ -63,8 +63,8 @@ export default function Home() {
         <Meteors number={20} />
 
         {/* Column 1 */}
-        <div className="w-full md:w-1/2 flex flex-col overflow-hidden h-full justify-center pl-32">
-          <div className="relative h-[100px] w-full overflow-hidden">
+        <div className="w-full md:w-1/2 flex flex-col overflow-hidden h-full pl-32">
+          <div className="relative h-[90px] w-full overflow-hidden ">
             <VideoText
               // src="https://www.pexels.com/download/video/18526831/"
               // src="https://www.pexels.com/download/video/9909477/"
@@ -76,11 +76,12 @@ export default function Home() {
             </VideoText>
           </div>
           {/* https://www.pexels.com/download/video/5091624/ */}
-          <h2 className="mt-[.5rem] text-[1rem]">
-            <span className="text-white">FULLSTACK SOFTWARE ENGINEER</span>
+          <h2 className="text-[1rem]">
+          <TypingAnimation className="text-white">FULLSTACK SOFTWARE ENGINEER 👋</TypingAnimation>
+            {/* <span className="text-white">FULLSTACK SOFTWARE ENGINEER</span> */}
           </h2>
           <BoxReveal boxColor={"#ffff"} duration={0.5}>
-            <p className="text-white pt-8">
+            <p className="text-white">
               As a dedicated software engineer, I design intuitive and
               user-friendly interfaces that empower businesses to harness the
               full potential of their data. Our platform provides real-time
@@ -141,10 +142,10 @@ export default function Home() {
               height={90}
             />
             <Image
-              className="absolute bottom-10 z-0 left-1/2 -translate-x-1/2"
+              className="absolute bottom-36 z-0 left-1/2 -translate-x-1/2"
               src={orange}
               alt="profile"
-              width={450}
+              width={380}
               height={90}
             />
 
@@ -159,11 +160,11 @@ export default function Home() {
                 className="relative left-1/2 -translate-x-1/2 top-20"
                 src="/images/profile.png"
                 alt="profile"
-                width={380}
+                width={320}
                 height={90}
                 priority
               />
-              <div className="w-full text-center pt-12">
+              <div className="w-full text-center pt-10">
                 <SparklesText
                   text="INNOVATE"
                   colors={{ first: "red", second: "white" }}
