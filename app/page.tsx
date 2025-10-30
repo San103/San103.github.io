@@ -8,6 +8,7 @@ import { DotPattern } from "@/components/ui/dot-pattern";
 import BoxReveal from "@/components/ui/box-reveal";
 import orange from "@/public/svg/orange.svg";
 import github from "@/public/svg/github.svg";
+import paper from "@/public/svg/paper.svg";
 import gradient from "@/public/svg/gradient.png";
 import SparklesText from "@/components/ui/sparkles-text";
 import DockDemo from "@/components/ui/social";
@@ -41,6 +42,7 @@ const githubLink = () => {
   return window.open("https://github.com/San103", "_blank");
 };
 
+
 export default function Home() {
   const [isSubmitted, setIsSubmitted] = useState<null | "success" | "error">(
     null
@@ -69,7 +71,8 @@ export default function Home() {
               // src="https://www.pexels.com/download/video/18526831/"
               // src="https://www.pexels.com/download/video/9909477/"
               // src="https://www.pexels.com/download/video/29882131/"
-              src="https://www.pexels.com/download/video/854322/"
+              // src="https://www.pexels.com/download/video/854322/"
+              src="https://www.pexels.com/download/video/19997371/"
               // src="https://www.pexels.com/download/video/6466100/"
             >
               Jessan Palban
@@ -101,7 +104,18 @@ export default function Home() {
               />
               View on Github!
             </RainbowButton>
-            <a
+            <RainbowButton onClick={githubLink}>
+              {" "}
+              <Image
+                className="mr-3"
+                src={paper}
+                alt="portfolio logo"
+                width={20}
+                height={20}
+              />
+              Portfolio!
+            </RainbowButton>
+            {/* <a
               className="flex items-center justify-center cursor-pointer"
               href="#expertise"
             >
@@ -110,10 +124,10 @@ export default function Home() {
                   "group rounded-full bg-orange-600 text-base text-white py-3 px-7 flex items-center"
                 )}
               >
-                <span className="text-white">✨ Explore More</span>
+                <span className="text-white">✨ View Portfolio</span>
                 <ArrowRightIcon className="text-white ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
 
